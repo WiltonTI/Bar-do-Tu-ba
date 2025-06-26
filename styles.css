@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #ff9800;
+    text-align: center;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav {
+    background: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a237e"/></svg>');
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}  
+    .hero img {
+        width: 200px; /* Largura da imagem */
+        height: auto; /* Mantém a proporção da altura automaticamente */
+        max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+        display: block; /* Evita espaçamentos indesejados abaixo da imagem */
+        margin: 20px auto; /* Centraliza a imagem horizontalmente */
+    }
+    
+
+
+.products, .about, .contact {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about, .contact {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    padding: 3rem;
+}
+
+.about h2, .contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background: #eee;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-image img{
+    mix-blend-mode: multiply;
+}
+
+.cta-button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    :root {
+        --primary-color: #1a237e;
+        --secondary-color: #ff9800;
+    }
+    
+    body {
+        background: #f5f5f5;
+    }
+    
+    footer {
+        background: var(--primary-color);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    footer p {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+    
+    footer a {
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    footer img {       
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+    
+    footer img:hover {
+        transform: scale(1.2);
+    }
+    
+    @media (max-width: 768px) {
+        footer {
+            padding: 1.5rem;
+        }
+    
+        footer p {
+            font-size: 0.9rem;
+        }
+    
+        footer img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    
+}
+
+
